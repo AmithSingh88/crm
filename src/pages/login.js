@@ -1,7 +1,9 @@
-import axios from 'axios';
+
 import React, { useState } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { userSignup, userSignin } from '../api/auth';
+import '../App.css';
+
 
 
 function Login() {
@@ -59,6 +61,8 @@ function Login() {
                 }
             })
 
+
+
     }
 
     const loginFn = (e) => {
@@ -88,16 +92,17 @@ function Login() {
                 console.log(error)
             }
         })
+        // console.log('login SUCESSFULL;')
     }
 
 
     return (
 
-        <div className='bg-dark d-flex justify-content-center align-items-center vh-100'>
+        <div className='body bg-dark d-flex justify-content-center align-items-center vh-100'>
             <div className='card m-5 p-5 bg-dark border border-light'>
                 <div className='row'>
                     <div className='col'>
-                        {!showSignup ? (<div className='login  '>
+                        {!showSignup ? (<div className='login '>
                             <h1 className='text-light p-2 mb-4 text-center' > LOGIN 🤗</h1>
                             <form onSubmit={loginFn}>
                                 <div className='input-group m-1 p-2'>

@@ -6,7 +6,9 @@ const BASE_URL = process.env.REACT_APP_SERVER_URL;
 //a function that will take user data from the ui and send to backend api
 export async function userSignup(data) {
     //hitting the api and sending data using post
+    console.log(BASE_URL);
     return await axios.post(`${BASE_URL}/crm/api/v1/auth/signup`, data);
+
 }
 
 export async function userSignin(data) {
