@@ -22,7 +22,7 @@ function Login() {
         setuserType(e)
     };
 
-    //to grab values from signup input fields
+    //to grab values from signup input fields ,very imp
     const updateSignupData = (e) => {
         userSignupData[e.target.id] = e.target.value;
         console.log(userSignupData);
